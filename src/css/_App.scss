@@ -1,0 +1,43 @@
+@use "sass:meta";
+@use "sass:color";
+@use "variables";
+
+$vertical-space: 2 * variables.$base-unit;
+main {
+  font-size: 2 * variables.$base-unit;
+  padding: $vertical-space;
+}
+
+h1 {
+  font-size: 4 * variables.$base-unit;
+  line-height: 1;
+  margin-bottom: $vertical-space;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: $vertical-space;
+  margin-top: 0;
+}
+
+button {
+  all: unset;
+  border-radius: variables.$base-unit;
+  font-family: variables.$font-family;
+}
+
+.btn {
+  background-color: variables.$primary-color;
+  color: variables.$light-color;
+  font-size: 2 * variables.$base-unit;
+  font-weight: 700;
+  min-width: 20vw;
+  padding: variables.$base-unit 2 * variables.$base-unit;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: color.adjust(variables.$primary-color, $blackness: 25%);
+  }
+}
+
+@include meta.load-css("components/die");

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <circle id="pin-7" fill="#2B283A" cx="35" cy="165" r="20"></circle>
+    <circle id="pin-3" fill="#2B283A" cx="165" cy="35" r="20"></circle>
+</svg>

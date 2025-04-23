@@ -1,0 +1,53 @@
+@use "sass:meta";
+@use "variables";
+/* Main styles */
+:root {
+  box-sizing: border-box;
+  color-scheme: light dark;
+  font-family: "Karla", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  font-weight: 400;
+  line-height: 1.5;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: variables.$base-factor;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: variables.$dark-color;
+  margin: 0;
+  padding: 2 * variables.$base-unit;
+}
+
+#root {
+  background-color: variables.$mid-color;
+  border-radius: 2 * variables.$base-unit;
+  color: variables.$dark-color;
+  text-align: center;
+}
+
+.sr-only {
+  height: 1px;
+  left: -10000px;
+  overflow: hidden;
+  position: absolute ;
+  top: auto;
+  width: 1px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: variables.$light-color;
+    color: variables.$dark-color;
+  }
+}
+
+@include meta.load-css("App");

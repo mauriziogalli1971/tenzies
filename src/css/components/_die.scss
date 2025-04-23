@@ -1,0 +1,39 @@
+@use "../variables";
+
+$die-size: 5 * variables.$base-unit;
+.die {
+  align-items: center;
+  background-color: variables.$light-color;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  border: none;
+  border-radius: variables.$base-unit;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: variables.$tertiary-color;
+  display: flex;
+  font-family: variables.$font-family;
+  font-size: 4 * variables.$base-unit;
+  font-weight: 700;
+  height: $die-size;
+  justify-content: center;
+  margin: 0 auto;
+  width: $die-size;
+
+  &__held {
+    background-color: variables.$secondary-color;
+  }
+}
+
+@for $i from 1 through 6 {
+  .die#{$i} {
+    background-image: url(/src/assets/die#{$i}.svg);
+  }
+}
+
+.dice--container {
+  display: grid;
+  gap: 0.5 * variables.$base-unit;
+  grid-template-columns: repeat(5, minmax($die-size, 1fr));
+  margin: 4 * variables.$base-unit 0;
+}
