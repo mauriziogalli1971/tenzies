@@ -31,6 +31,8 @@ body {
   background-color: variables.$mid-color;
   border-radius: 2 * variables.$base-unit;
   color: variables.$dark-color;
+  margin: auto;
+  max-width: 600px;
   text-align: center;
 }
 

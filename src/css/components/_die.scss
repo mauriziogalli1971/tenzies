@@ -33,7 +33,9 @@ $die-size: 5 * variables.$base-unit;
 
 .dice--container {
   display: grid;
-  gap: 0.5 * variables.$base-unit;
+  gap: 2 * variables.$base-unit;
   grid-template-columns: repeat(5, minmax($die-size, 1fr));
-  margin: 4 * variables.$base-unit 0;
+  margin: 4 * variables.$base-unit auto;
+  max-width: max-content;
 }
+

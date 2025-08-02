@@ -21,7 +21,7 @@ p {
 }
 
 button {
-  all: unset;
+  border: none;
   border-radius: variables.$base-unit;
   font-family: variables.$font-family;
 }
@@ -31,7 +31,7 @@ button {
   color: variables.$light-color;
   font-size: 2 * variables.$base-unit;
   font-weight: 700;
-  min-width: 20vw;
+  width: 330px;
   padding: variables.$base-unit 2 * variables.$base-unit;
   white-space: nowrap;
 

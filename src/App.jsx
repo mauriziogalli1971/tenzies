@@ -1,5 +1,5 @@
-import { useState, useRef, useEffect } from "react";
-import { useWindowSize } from "react-use";
+import {useEffect, useRef, useState} from "react";
+import {useWindowSize} from "react-use";
 import Confetti from "react-confetti";
 import Die from "./components/Die.jsx";
 import Timer from "./components/Timer.jsx";
@@ -31,11 +31,9 @@ function App() {
   }
 
   function rollDice() {
-    const newDice = dice.map((die) => {
-      return die.isHeld ? die : { ...die, value: rollDie(), isHeld: false };
+    return dice.map((die) => {
+      return die.isHeld ? die : {...die, value: rollDie(), isHeld: false};
     });
-
-    return newDice;
   }
 
   function rollDie() {
@@ -80,8 +78,8 @@ function App() {
       {gameWon ? <Confetti width={width} height={height} /> : null}
       <h1>Tenzies</h1>
       <p>
-        Roll until all dice are the same. Click each die to freeze it at its
-        current value between rolls.
+        Roll until all dice are the same. <br />
+        Click each die to freeze it at its current value between rolls.
       </p>
       <p>
         <strong>Roll #{rollCount}</strong>
